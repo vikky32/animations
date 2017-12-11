@@ -1,0 +1,67 @@
+body {
+    background-color: #ececec; }
+
+.container .blocks {
+    display: flex;
+    justify-content: stretch;
+    flex-wrap: wrap;
+}
+.table{
+    height: -webkit-fill-available;
+}
+.container .blocks .block-shadow {
+    display: flex;
+    align-self: center;
+    cursor: pointer;
+    background-color: white;
+    width: 24%;
+    height: 150px;
+    padding: 10px;
+    margin: 4px;
+    box-shadow: 3px 3px 5px 0 #838383;
+    transition: all 0.5s ease;
+    justify-content: center;
+}
+.container .blocks .block-shadow span {
+    font-size: 50px;
+    align-self: center;
+}
+.container .blocks .block-shadow:hover {
+    background-color: #dadada;
+}
+
+
+.play-cube .actions {
+    text-align: center;
+}
+.play-cube .container {
+    margin: 50px auto;
+    width: 300px;
+}
+.play-cube .cell {
+    background-color: transparent;
+    /*border: 2px solid #ececec;*/
+    border: 2px solid transparent;
+    float: left;
+    height: 96px;
+    width: 96px;
+}
+
+.puffIn{
+    animation: puffIn 1s ease;
+}
+@keyframes puffIn {
+    0% {
+        opacity: 0;
+        transform-origin: 50% 50%;
+        transform: scale(2,2);
+        filter: blur(2px);
+    }
+
+    100% {
+        opacity: 1;
+        transform-origin: 50% 50%;
+        transform: scale(1,1);
+        filter: blur(0px);
+    }
+}
